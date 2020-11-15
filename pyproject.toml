@@ -1,0 +1,29 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "ghibli_wrapper"
+version = "0.0.0"
+description = "A small wrapper app around the Studio Ghibli API"
+authors = ["Nick Badger <nbadger1@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+fastapi = "^0.61.2"
+base58 = "^2.0.1"
+Hypercorn = "^0.11.1"
+trio = "^0.17.0"
+trio-asyncio = "^0.11.0"
+asks = "^2.4.12"
+
+[tool.poetry.dev-dependencies]
+ipython = "^7.19.0"
+pytest = "^6.1.2"
+flake8 = "^3.8.4"
+
+[tool.pytest.ini_options]
+addopts = "-rA -q"
+testpaths = [
+    "tests"
+]

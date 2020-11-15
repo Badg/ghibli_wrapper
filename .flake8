@@ -1,0 +1,15 @@
+[flake8]
+count = True
+show_source = True
+statistics = True
+ignore =
+    D203,
+    E133,
+    W504
+exclude = 
+    .git,
+    __pycache__,
+    docs/source/conf.py,
+    build,
+    dist
+max-complexity = 10
