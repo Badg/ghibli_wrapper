@@ -429,6 +429,14 @@ optional = false
 python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
+name = "pyperclip"
+version = "1.8.1"
+description = "A cross-platform clipboard module for Python. (Only handles plain text for now.)"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "pytest"
 version = "6.1.2"
 description = "pytest: simple powerful testing with Python"
@@ -559,7 +567,7 @@ h11 = ">=0.8.1"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "7d9555407aa97735fdfe0065d0c7b4cda17b832acc05711127a10fd24f429fd7"
+content-hash = "fa84a41ac4d08c807573567f037128454b8efccd45c8e4b8653fd8d863e0ef82"
 
 [metadata.files]
 anyio = [
@@ -774,6 +782,9 @@ pygments = [
 pyparsing = [
     {file = "pyparsing-2.4.7-py2.py3-none-any.whl", hash = "sha256:ef9d7589ef3c200abe66653d3f1ab1033c3c419ae9b9bdb1240a85b024efc88b"},
     {file = "pyparsing-2.4.7.tar.gz", hash = "sha256:c203ec8783bf771a155b207279b9bccb8dea02d8f0c9e5f8ead507bc3246ecc1"},
+]
+pyperclip = [
+    {file = "pyperclip-1.8.1.tar.gz", hash = "sha256:9abef1e79ce635eb62309ecae02dfb5a3eb952fa7d6dce09c1aef063f81424d3"},
 ]
 pytest = [
     {file = "pytest-6.1.2-py3-none-any.whl", hash = "sha256:4288fed0d9153d9646bfcdf0c0428197dba1ecb27a33bb6e031d002fa88653fe"},

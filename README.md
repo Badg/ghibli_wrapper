@@ -4,6 +4,11 @@ A simple wrapper around the Studio Ghibli public api.
 
 [![CI](https://github.com/Badg/ghibli_wrapper/workflows/CI/badge.svg)](https://github.com/Badg/ghibli_wrapper/actions)
 
+Mostly written for the obvious reasons 😊, but I also wanted to learn a bit. In particular, since I'm slowly chipping away on my own web framework smiliar to fastAPI (link: [annoliate](https://github.com/Taev-dev/annoliate)), I was interested in:
+
++   using fastAPI for the first time!
++   getting more familiar with pydantic, which I'm actually using behind the hood in annoliate anyways. In particular, it was a good excuse to write my first custom type
+
 ## Installation, usage, tests
 
 ### With ``poetry``
@@ -15,7 +20,7 @@ poetry install
 # ----- Usage ------
 poetry run python -m ghibli_wrapper
 # ----- Running tests ------
-poetry run pytest
+poetry run python -m pytest --import-mode=importlib
 ```
 
 ### With ``pip``
@@ -28,7 +33,7 @@ pip install .
 # ----- Usage ------
 python -m ghibli_wrapper
 # ----- Running tests ------
-python -m pytest
+python -m pytest --import-mode=importlib
 ```
 
 **Note: this requires a relatively new ``pip`` version** (I believe ``19.0.0`` or above, but don't quote me on that; I tested with 19.2.3).
