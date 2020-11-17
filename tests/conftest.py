@@ -1,5 +1,6 @@
 import functools
 
+import asks
 import pydantic.typing
 import pytest
 
@@ -39,3 +40,8 @@ def fixup_pydantic(monkeypatch):
         pydantic.typing, 'resolve_annotations', resolve_annotations_fixup)
     monkeypatch.setattr(
         pydantic.main, 'resolve_annotations', resolve_annotations_fixup)
+
+
+@pytest.fixture(autouse=True)
+def run_asks_init():
+    asks.init('trio')

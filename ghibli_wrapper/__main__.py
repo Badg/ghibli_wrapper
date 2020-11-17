@@ -1,4 +1,8 @@
+import asks
+
+
 def main():
+    asks.init('trio')
     print('hello world')
 
 
