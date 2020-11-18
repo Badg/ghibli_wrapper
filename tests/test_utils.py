@@ -4,10 +4,10 @@ import pytest
 from pydantic import BaseModel
 from pydantic import ValidationError
 
-from ghibli_wrapper.utils import HyperlinkFriendlyUuid
+from ghibli_wrapper.utils import HyperlinkFriendlyUUID
 
 
-class TestHyperlinkFriendlyUuid:
+class TestHyperlinkFriendlyUUID:
     '''This tests that we correctly implemented our UUID <-> base58
     custom type.
     '''
@@ -29,7 +29,7 @@ class TestHyperlinkFriendlyUuid:
         # Note that we need to define this within the test, since we have to
         # fixture a monkeypatch to pydantic (see conftest.py)
         class _HFUuidModel(BaseModel):
-            base58_uuid: HyperlinkFriendlyUuid
+            base58_uuid: HyperlinkFriendlyUUID
 
             class Config:
                 arbitrary_types_allowed = True
@@ -54,7 +54,7 @@ class TestHyperlinkFriendlyUuid:
         # Note that we need to define this within the test, since we have to
         # fixture a monkeypatch to pydantic (see conftest.py)
         class _HFUuidModel(BaseModel):
-            base58_uuid: HyperlinkFriendlyUuid
+            base58_uuid: HyperlinkFriendlyUUID
 
             class Config:
                 arbitrary_types_allowed = True
@@ -77,4 +77,4 @@ class TestHyperlinkFriendlyUuid:
     def test_stringify(self, base58_uuid, uuid_hex):
         '''Test that our UUID subclass str()'s into a valid base58 UUID.
         '''
-        assert str(HyperlinkFriendlyUuid(uuid_hex)) == base58_uuid
+        assert str(HyperlinkFriendlyUUID(uuid_hex)) == base58_uuid

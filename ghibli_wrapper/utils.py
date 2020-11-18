@@ -6,7 +6,7 @@ import base58
 _BASE58_ALPHABET = base58.BITCOIN_ALPHABET.decode()
 
 
-class HyperlinkFriendlyUuid(UUID):
+class HyperlinkFriendlyUUID(UUID):
     '''Okay, I'm going to go on a long and probably unnecessary tangent
     about encoding UUIDs into a format suitable for hyperlinking. But
     first I want to say explicitly: this is the kind of thing you either
