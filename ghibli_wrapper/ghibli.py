@@ -23,7 +23,8 @@ GHIBLI_RETRIES = 2
 logger = logging.getLogger(__name__)
 
 
-def _ghibli_request(endpoint, **params):
+# Decorators don't play well with the mccabe complexity checker :(
+def _ghibli_request(endpoint, **params):  # noqa: C901
     '''Decorator to construct quick-and-easy requestors from the ghibli
     API. This isn't super flexible; in particular, we can't do dynamic
     parameters, though you could easily adapt it to support them.
