@@ -1,0 +1,162 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+    method: GET
+    uri: https://ghibliapi.herokuapp.com/films?fields=id%2Ctitle%2Crelease_date%2Cdescription
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA51aXY/bRpZ9n19Rm5feBcSGKFGUlJdFJ5PEHscbI/YgCBaLxWWxKFVEsjRVZCvy
+        YoD8jQF2/1x+yZ57qyi101Y/DALH7RZZVffr3HNu6T//pNT/4I9SX9j6iy/VF4uKmvW8zrNiUVVZ
+        USzXWbVa5ZlZNaZe0WZNlfliFt8Y7NAafulrCvhJ2V4Ne6PeH87TE7UJ2tvjYF3Pz33Ap84f99Sr
+        93tjBsIre+PtYGpFqjuHAf9wY1Da42dqsRwNqrX9ISg8pwYnG3TnYW81Pg6Hc3aw/a52nXKN+p6O
+        40D36ic77OXBvWmP/IE3wY1em2Zs1Tv6OCrqeUPv2tZqXkBV/Bs8iRXV0XoaTJipwHvRwcTNT3Se
+        DuBH2wd+nP/hem2ynTc4qbaPtrUfie29n0zklWXTbgyDcuNwsoO8aPCwejuGA83Uae/UsSWsii3G
+        YJItd0EFbQ124N/zWdTedsG0sGlscah0hpPzbX0/ed2b1lAw/13DDHZ7vt2UX+Cjv8/+GO18oZtq
+        s11kRHqeFXpVZduCmmy1yDerhSnKuqRn0f7O06OZdv7WetO01oQbIX8dc6KlAbFVR/IDv/kTn1f9
+        RF69fj1DJCp3Fj/tLQy2nAazlCjIjNPeyCLWq84NHAo8dbBti89SyjU4ReW6ikOJ5T+4w9lhXY+N
+        TTOw78LoHy0fe1rKnXp++8QZ5k1HKaIxhEjQ1jaS0X+hIyGYnLrH1g2qQdK4E+LEZ31+bkX8kTmr
+        2qWNKhM+OUE6sqxrEGntxn5AvtvazJCHw9CyFfux37EXjt78MtZW4zPe6OjxWFoiGfG30ZoBDxof
+        XI+ikCXMS8mw+XwyrDZlnueLbbaoK50VtMkzWi+abL2u60bnVV4V22fJ8Pas/sPY3b5yHm4fnHe3
+        av/kkosCwvhoplpK5qtTKlpY1VCMco8cqGPZV3iwdeGCAXhq78LRAiTsR+RBTIzoo9oGjQ28LA+v
+        e+xQs08Hb1DLnBWAHaoEdqpzOjbqvaNdhBUggB0uBd444McAWEl5qM6Og4Oo+hFJQwwMjQcE7V2H
+        MAkmtHzulBHBGMEvYJE8JsdKW8CaxnICGf9PRMxQWc6rfJ5tVrpAxMwy29CqyYpcG1qWxcYsn4P1
+        G3uwwJU/mxbZCMe/N8hLbW6E7SFay+HR+xmXD4emg58JXjursyFBIRhhjgb/6wcpnZnYFfD/YWDf
+        2x6mkurNCRHvurG3A2rENo3VYzugDC0aSJCAHY/OD4K5AnSIEPzc8yIoS0LkkTLeimPl5C85bvt5
+        xxVmsSybZZFVW2Q53AXH6XKVNRu9nc/n1bYw62eO+6Fvz+pnwzGt6VaLez38/ts/gsLWi5iNH8gc
+        HCPWYi3OCpwcMzX2HXlYUcen9oANjkcdW83ewRsTAgmaSTtRtdGof0mbRxvQR/jphjqLkyVc+QRO
+        pM8JICH5iZ9g7G75N6iKXeySPcoXANKZzuFACFnrHAqD9IEDyzvEhPfx/F9OiIsCsF1Hw4iCCoOF
+        Nf1OigZJTr2eSqEPRjD/OFbGD+d4KFnCoyF6aZbyGpbay4dA1XCvHmKXBA/gJyQ34MUOiyEjYlI2
+        5DvDuBP21l0XRr9kJzDSCKqgZQJAdmy+A9Zr1/dGDxOjQHnvHLoTIN/1O7bhXqFrtWcfwUAyH26p
+        zHAyCQGAyoEzfdrxCAI0S6HG8oPp0MwHEz1PXk+OjJXBb50cagUHtI1YxvGvZHU/XqCxBqnowvSu
+        RonUew4Nl8ULSb/Nb6BFVVVltdZo8Svge24M8B29vzZzUyzzbV7Vm2dJ/8557dSPLoRbwP7kiZk6
+        9KmvSnvj3Pvag7Agfu/sTv3rG+RKT1b1Tn0FevNvHFEJsv1VYm+RA6iBxrYdR/kVncmpt/ZMH+lg
+        xW/JXOn8MHVxr352451A+uBdPWp8xEjTq9fcG/D3E66BhZHq3KQ5O3FUrjkBFsA48tGYlhMXCYj0
+        OXMPHsTxFPihO8aeRA7vpnJ7qL1FgmrAKJjnqyeR3KGc4QGlR+BYZLJYCXUU6cLeUB0DTVIehKV3
+        9+oH3h95x+TmLbFn3xHSc6Zi+vOZo49Tjgjz4/PfPYnD3exiPbJb3f2IxeD/+7sXkmZxgyFW5Zpo
+        SxnYIGXFCuSQ9HaTlQWoYZ2vqrzUn0maTr1zh1sZ8xCDvh8BEyBc3AgMUMkdO64pVK93JCUXyZry
+        pLXDz0d3HFtBA/Sv2JUlJzq4En6Rlk7D7Ok7IbZX/IZZ8yOjG3GKTGxDSQtEnbVYPQRbgfzhPIiH
+        +RV9S0cmDzjAZkeGsj+sbvod7QSlCUYEkDB4FJjlx92ulUIOgzsmYO7597Jk4nKGO5i58JnupVa2
+        LT4foKZZFDUtyoy25TYrmrnJKspR2vliAb+UujTLZwH6CRl4vMqHV8D14Uaw3u/tx/EwSnfiKgkW
+        2GYSkkF42Z4SjxKAY2bHOQezpZkI1oHqoIA4uQFqYEuMeL1D1QhCIv+R71Em2MoTAlI5B8o0AeOe
+        9YbUFFz2yAIR7Q4Jog/YGIKKNxcUoc4kHvyluntv7C9WPXQUwNDu7tXXY9SWJO2TBZeU1ExNFnaQ
+        ayGJEbaFA4vHOjlHZDO2b0ap934Hro6dJ64pa/JLYe/QN8WoWLH8y7t36I1aNNNXbBlO8xDN23nW
+        Eldqi1YVdSenpA2Tf1iIGuSEpGqd3IV3kqOYIHtRDUkcPlkQxFLEC1sVXUJMPiOJAK0mMAkHySHq
+        Ukg3Q0dq02AYbAL+pF4kpxEdOnktHTR+MkUM+K5bZoZH7umcD1P3u1dvAF/CxqNhnCpoCjs8xzJS
+        NFnMl+gIgO2Q1D+1wIfA0U5PcDoKC6WK0+Ar8q5nOan5KICC0aCvw8jU2NlicQHgY+dhXxQaLxXd
+        6vNFNy+KebFZmkwT6q3IF6DgesUKeqPrbbUtV3X5HBUlCUJQb12P/w43KTfYzEA8FSDWeylxhBDY
+        QMcj/MrGPNh+BF2wFeoQAZI2I3XISNS5XnRR5RCEHTiD4CQPIH4Bee7NZZRxSupUYFKaFUL0wA6L
+        H9NZWs8TSvWexMeRgUUMPzHhi801ufno3cAc66qfYkJ9T/VZfVMxYYtDDyYA/pzegiPQxEFlBy6Q
+        6IV46nS8NIOJyV5R7NZiCXvA9U1r9fBSPNc39MBqMS8W0ANUNzW6nK4yWs1XGW3Mmsp1WeV58ZL0
+        jQ3tZ+qopluTkA/XJ0SDkhrOR6GYna3rlgUuITkuc4ErrR99RUkGJMZpQ+RIQBvAB4OaekRWmNS6
+        jjY4lgkxbayP4D0NxlBGqZA905GrKEUwkRyMkSk59twXKlT4QcrxZFjLpu3j6bQ7mthMubjvWMTw
+        9OESi8ATDFe1aL9y9F9A7T8dXyCkLwXshoCr9cKUVZ1nm3xVZsVmU3Lomqxabk05L5bUzJ/Tkvci
+        ulEVD6eb+u2TZzg74fkfgkYVAbREhF4C9CldjRCEoKJNRVEMXrazvpU0P1Gk+0+GBXEcJohGUm8U
+        0TLOPAHzEgZKDI/HfVLdLJk4auzNsR/DyAnE1ML4rLWHdKw2MBm97nBtoRMHFUEOyjntLkGUKQoH
+        iOUjt0IcaO94HtmM6Dkxn3hmxeNOQIXkFD4IMs6Ms44ntBTZyS2EJ6TwQPj3W3FezOc3NMt2Xq0X
+        q3yZUVMXKMw1gLaowW5WpV7mi6ZuNvmzOHOlfQ0n/mhwxv5WPb4iPzKQBQ1R1UqkUMlXKuN8DW7D
+        7BCBtT1QNtBjknQizZm095cYcM/hmISxrg1PCkTIixsE46gPAMKO1zdnx2jW8xgbnr84z/IAqjd1
+        bNhswRv+3JsT+Tr2wB3rv9pMDBaipR29l6pPmhQVh5bRjnXsj8JvhZTwv1GLoLnURrkNxc4cR2gH
+        6Ijr/0WxU5TpKvIHod9ioPn1CCw39R97x5vr6B2HDTyo9UaOac5p0AZ46JMiS1ONOMF9eWCNfLgh
+        R3S9rOerrc7m2wb50DTLbFOXy6zS63JFq3xTNM8H1q/cqb3jtitaL15W3EgKmfG9d8e9NZIb+2nU
+        IC3uaaON/u+lzCuHriadl0eScs2Q5mWSSL3QVUqNfMLTNAc0KB8hPimgzN8ydLux3bEaOpuBy9Fw
+        Y76M4j4iHy5zZ+06AJIMUQCs/JvW7HY8WDpRKxu9qCzg6xvKIs8XOjflOlsvyiYr5lUO6Zevs3K7
+        BuNZVxWIzvPak+4iCPcNmsc+GLqFtDhVLICKDfKROcIaeGma3qLBp2qYrnmYihq5JvIURcU741iQ
+        cLbJkKdPZIL0MIHl/T1Pb2lAEhgW5Z2TkVUEUpua4fHGOgxptYcI7wNTFqv3XE9jW/d3LFaHdNRY
+        6jyrYUoEYPxzHOQkacNcPZnJR+Ay/U6Gf6k12EtgJclsD6gZ7I6GKVM0AYZ51UT0w1SNs6gOWLsk
+        mfGAXZ5wNLBGmDqCnKE5mZ5LHmKAPcIzV3kYYHCGdnMHFVvIk8TnV2SLvQxJAiMVqzh/UHHGGF3C
+        fJr7jO0ufB5vEX6EQX4c9kiL0DP7ncad0AjQNBrnZ92sLRx1jnc9aBmcBuEJkWSbPxg/3qtvXfI3
+        F5h6A8oSCQm3ahZ/DdNOJzNkGTLHwalmIAuxN8F4JMJdw8PMO6g8vvoZrsMA15vYsjnGcWwvqgzh
+        eqmIbtywrVebqpkvTIZutciK0qCBbQqTlWvdbJZ1k683n1EKrj/fvEdh1AAyy8gokG2dn6lVdqEc
+        710YD+Yi1+V2KPUrgXOnDcX2rvHbZpqQhulu7XtojKjUoY4EyuqkAaIEBikwhIbIn+ywYWPDntsb
+        dEkd5yCVEwqYhjd4Wsex7nh0MkfRo2QwX9f01KXbVTH5nqeC06QX+XFpwdNGEQtqSeY4voA+IOY+
+        EXMvwMiJSix84D2UmqzOCRDSxJxNRRLIjY+0s6k/X64d0oVFLAJhB7wu3KkPyNMG2Sp4KwMP8WF0
+        fBwLsOGcbnyjPML8ozvFIwbnNSeZVDM7s2YMEs5tu0nQpNFi7JEqTcs6noDBUqqZdwOQQPx7BP16
+        Lc5kPXpazOUZWbxIAy2o4yISfLabpRqqLRKa6Q6KsTW5No65hpOLY2eGiMgKUhZRzSDGPUliwPk1
+        2C4OvOjxKQfk88DyhmnidK7rYLsymkdISUi+VF83rsAWtdkWi7LKtjnPJ2kOIbCkebYyZb2tlxAG
+        zfP6euCbl2G4pQHyQsop43KaHr2M+mXqmPT41y0Pe5IUatPlLvR5/KYBQeWfOx4nTnfCMji5Sh/u
+        y7FVgjTAH3fgnx6ZUt890WTMvuGyKLTTvSVDLfg9Hn3kUEl1R14vc9Hr2UIEVEqv8wzoOrGaTHvB
+        6/n8ll6uq3lhimw5Z69vl8tsu1kss+WyWW62ZlOvi/qZ179lm/565Ax6B4A+q1fIiZdQTkY7zEyF
+        A6l8Wy7575/dwe0hpO/VG3dAOzw49Ra+5vvWIZJWpDKrFVjJPW3qoHvy0GgeFaXyUl0izLU9U3/t
+        7CyBppQfz6acdNxvpCuAMvQTWfdkQ5qF7vjGvWmJ76L0hdTxVQBbIB90jLfq99/+9zWaGas/Pikh
+        Yo/ujF4cfv/t/+RI6+uRECceS47cxFsoRnaBSV85iJtd7pGBcjwhxaHkYhD6c9xVjuI3DkTZ3Kvv
+        PNWjtNd4V4X0Y5bDGCL3CILQEf0TeJ3lgSejckq6hgdO1IpTgEZuFh8+GHME2NokI1kIT1e2ctIn
+        vtmzlNnbY7wo5Nnhywl4QxeW62K+yvM8W65plRXLTZNtcq3RYMuSmnKuN/P5Z3XhT4x0P3L8bl54
+        czmJJBZsxzGbluGSaXgcnF4nAI82Xk4ani8a+O8v1jsUJiflNOIKJg3Da6C+NzJjZX2WpKRIaRsb
+        ulwoZeXbT74fc7m04u8HvcTj8+WN73WsN2QWRZGt1zyirLfwVbmusmbJaqoEYWqeD7fYV8zlp2Nd
+        hpdvaDeeb3H6B1VRVzl0jVG+78P9veaJ4XiQSz++yhvQJt0TGEIHt72N18jSZy/Th10bJ8VpTbBu
+        N4AiGMilx0QhLkPsmi/ypotZvt3bm4tCOjE+xqtzuQHm8o0T/nBF45ncuk3L3k323v0zDm/qplou
+        5tmC5uB8W1pnW0jVbKWpyDeaTAl5+/xKBhX1loAySFIc7AOL6RfQUYZO05eRHvqe4ObAt6TpSjPy
+        OpiCcyPBLsAmmBGiK079fXw10m3S3jFBF17Bcpa/FedYv7OisTxbjxI/XBRHPPDs02/vXaZeFK5f
+        3AOR7+SewEW4iI6HsPW8jsAEd7Mz9rtwnjB2fL+PV3eIa+Dv5Mlxw1EYjcg4oR1i7OUsCLtorIh5
+        8gZfRvTTFyFGBjQZ1z35+oTwFCdf2OEyfSnsUS//6b/+Hw/+E9I9KQAA
+    headers: !!python/object:asks.req_structs.CaseInsensitiveDict
+      _store: !!python/object/apply:collections.OrderedDict
+      - - - server
+          - !!python/tuple
+            - server
+            - Cowboy
+        - - connection
+          - !!python/tuple
+            - connection
+            - close
+        - - x-powered-by
+          - !!python/tuple
+            - x-powered-by
+            - Express
+        - - vary
+          - !!python/tuple
+            - vary
+            - Origin, Accept-Encoding
+        - - access-control-allow-credentials
+          - !!python/tuple
+            - access-control-allow-credentials
+            - 'true'
+        - - cache-control
+          - !!python/tuple
+            - cache-control
+            - no-cache
+        - - pragma
+          - !!python/tuple
+            - pragma
+            - no-cache
+        - - expires
+          - !!python/tuple
+            - expires
+            - '-1'
+        - - x-content-type-options
+          - !!python/tuple
+            - x-content-type-options
+            - nosniff
+        - - content-type
+          - !!python/tuple
+            - content-type
+            - application/json; charset=utf-8
+        - - etag
+          - !!python/tuple
+            - etag
+            - W/"293d-vrIcPL/N/MYCLXsSu6FXY70ji/A"
+        - - content-encoding
+          - !!python/tuple
+            - content-encoding
+            - gzip
+        - - date
+          - !!python/tuple
+            - date
+            - Thu, 19 Nov 2020 08:46:32 GMT
+        - - transfer-encoding
+          - !!python/tuple
+            - transfer-encoding
+            - chunked
+        - - via
+          - !!python/tuple
+            - via
+            - 1.1 vegur
+    status:
+      code: 200
+      message: OK
+    url: https://ghibliapi.herokuapp.com/films?fields=id%2Ctitle%2Crelease_date%2Cdescription
+version: 1

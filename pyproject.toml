@@ -22,9 +22,13 @@ ipython = "^7.19.0"
 pytest = "^6.1.2"
 flake8 = "^3.8.4"
 pyperclip = "^1.8.1"
+pytest-trio = "^0.7.0"
+pytest-vcr = "^1.0.2"
+vcrpy = "^4.1.1"
 
 [tool.pytest.ini_options]
 addopts = "-rA -q"
 testpaths = [
     "tests"
 ]
+trio_mode = true

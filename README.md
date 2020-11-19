@@ -8,6 +8,12 @@ Mostly written for the obvious reasons 😊, but I also wanted to learn a bit. I
 
 +   using fastAPI for the first time!
 +   getting more familiar with pydantic, which I'm actually using behind the hood in annoliate anyways. In particular, it was a good excuse to write my first custom type
++   getting VCR.py to work with python-asks
+
+### Some lessons learned
+
++   Pydantic's API has some rough edges around custom types
++   I don't want to use VCR.py with python-asks
 
 ## Installation, usage, tests
 

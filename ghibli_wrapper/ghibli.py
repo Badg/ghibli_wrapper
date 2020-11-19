@@ -2,6 +2,7 @@
 These coroutines implement no caching, they simply perform requests.
 Only call them when you know you need to hit their servers.
 '''
+import dataclasses
 import functools
 import json
 import logging
@@ -80,11 +81,17 @@ def _ghibli_request(endpoint, **params):
                 raise GhibliApiFailure(endpoint) from exc
 
             try:
-                adapted_result = await request_adapter_coro(payload)
+                # This is awkward. In particular, it forces out request adapter
+                # to always be an async iterable. However, wrapping an async
+                # generator is super complicated (I mean there's a whole note
+                # in pep525 explaining why "yield from" wasn't included), so
+                # the route of least resistance is to just enforce consistent
+                # semantics from all wrapped requestors.
+                async for adapted_result in request_adapter_coro(payload):
+                    yield adapted_result
+
             except (Exception, trio.MultiError) as exc:
                 raise GhibliApiFailure(endpoint) from exc
-
-            return adapted_result
 
         return wrapper
 
@@ -151,6 +158,29 @@ class _GhibliRecordMixin:
             raise GhibliApiFailure('Had results, but none parsed')
 
 
+@dataclasses.dataclass(frozen=True)
+class _GhibliFilmUrl:
+    url: str
+    uuid: UUID
+
+    @classmethod
+    def __get_validators__(cls):
+        yield cls.validate
+
+    @classmethod
+    def validate(cls, value):
+        if not isinstance(value, str):
+            raise TypeError('Value must be a string!')
+
+        # This is fragile, but also expedient. Ideally we would be refreshing
+        # our VCR captures regularly to make sure the Ghibli API hadn't been
+        # updated in a way that changed this. Ultimately, this would be relying
+        # on circuit breakers to gracefully failover from unannounced partner
+        # changes like that.
+        __, __, uuid_hex = value.rpartition('/')
+        return cls(url=value, uuid=UUID(uuid_hex))
+
+
 @pydantic.dataclasses.dataclass(frozen=True)
 class _GhibliFilmRecord(_GhibliRecordMixin):
     # We want to preserve the exact result we received here, so don't convert
@@ -167,5 +197,7 @@ class _GhibliPersonRecord(_GhibliRecordMixin):
     # immediately to hyperlinkfriendlyuuid
     id: UUID
     name: str
-    films: List[UUID]
+    # Note that these are a list of URLs, which contain the UUID, but isn't
+    # simply the uuid itself.
+    films: List[_GhibliFilmUrl]
     url: str
