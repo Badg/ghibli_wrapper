@@ -28,6 +28,10 @@ def _ghibli_request(endpoint, **params):  # noqa: C901
     '''Decorator to construct quick-and-easy requestors from the ghibli
     API. This isn't super flexible; in particular, we can't do dynamic
     parameters, though you could easily adapt it to support them.
+
+    I'm not 100% happy with decorators that alter the signature of the
+    function/coroutine they decorate, but they can also be very
+    expedient.
     '''
     # This happens at decoration-time, so there's no performance penalty. We
     # don't want developers spelling out the whole URL in each of the endpoints
@@ -57,9 +61,6 @@ def _ghibli_request(endpoint, **params):  # noqa: C901
         @functools.wraps(request_adapter_coro)
         async def wrapper(*args, _endpoint=endpoint, _params=params, **kwargs):
             '''Adds a lot of error handling to the ghibli API.
-
-            This would also probably be where I would implement circuit
-            breaker logic for it, if I had time.
             '''
             try:
                 response = await asks.get(
@@ -174,10 +175,10 @@ class _GhibliFilmUrl:
             raise TypeError('Value must be a string!')
 
         # This is fragile, but also expedient. Ideally we would be refreshing
-        # our VCR captures regularly to make sure the Ghibli API hadn't been
-        # updated in a way that changed this. Ultimately, this would be relying
-        # on circuit breakers to gracefully failover from unannounced partner
-        # changes like that.
+        # our VCR (test request playback) captures regularly to make sure the
+        # Ghibli API hadn't been updated in a way that changed this.
+        # Ultimately, this would be relying on circuit breakers to gracefully
+        # failover from unannounced partner changes like that.
         __, __, uuid_hex = value.rpartition('/')
         return cls(url=value, uuid=UUID(uuid_hex))
 

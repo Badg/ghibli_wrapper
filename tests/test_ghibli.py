@@ -13,15 +13,14 @@ from ghibli_wrapper.ghibli import _GhibliPersonRecord
 
 # EDITORIAL NOTE: using VCR here means that we're not making live requests
 # during tests, but rather loading saved replays from /tests/cassettes
-@pytest.mark.vcr()
-async def test_get_all_people_happy_case():
-    async for record in get_all_people():
-        assert isinstance(record, _GhibliPersonRecord)
+class TestGhibliWithVcrRequestPlayback:
 
+    @pytest.mark.vcr()
+    async def test_get_all_people_happy_case(self):
+        async for record in get_all_people():
+            assert isinstance(record, _GhibliPersonRecord)
 
-# EDITORIAL NOTE: using VCR here means that we're not making live requests
-# during tests, but rather loading saved replays from /tests/cassettes
-@pytest.mark.vcr()
-async def test_get_all_films_happy_case():
-    async for record in get_all_films():
-        assert isinstance(record, _GhibliFilmRecord)
+    @pytest.mark.vcr()
+    async def test_get_all_films_happy_case(self):
+        async for record in get_all_films():
+            assert isinstance(record, _GhibliFilmRecord)

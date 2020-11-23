@@ -1,0 +1,114 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+    method: GET
+    uri: https://ghibliapi.herokuapp.com/people?fields=id%2Cname%2Cfilms%2Curl
+  response:
+    body:
+      string: !!binary |
+        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
+        I8JmJJ/8+B9E9dO2YS8AAA==
+    headers: !!python/object:asks.req_structs.CaseInsensitiveDict
+      _store: !!python/object/apply:collections.OrderedDict
+      - - - server
+          - !!python/tuple
+            - server
+            - Cowboy
+        - - connection
+          - !!python/tuple
+            - connection
+            - close
+        - - x-powered-by
+          - !!python/tuple
+            - x-powered-by
+            - Express
+        - - vary
+          - !!python/tuple
+            - vary
+            - Origin, Accept-Encoding
+        - - access-control-allow-credentials
+          - !!python/tuple
+            - access-control-allow-credentials
+            - 'true'
+        - - cache-control
+          - !!python/tuple
+            - cache-control
+            - no-cache
+        - - pragma
+          - !!python/tuple
+            - pragma
+            - no-cache
+        - - expires
+          - !!python/tuple
+            - expires
+            - '-1'
+        - - x-content-type-options
+          - !!python/tuple
+            - x-content-type-options
+            - nosniff
+        - - content-type
+          - !!python/tuple
+            - content-type
+            - application/json; charset=utf-8
+        - - etag
+          - !!python/tuple
+            - etag
+            - W/"2f61-1vJ095NjuNIRDYyef6SFltArsdg"
+        - - content-encoding
+          - !!python/tuple
+            - content-encoding
+            - gzip
+        - - date
+          - !!python/tuple
+            - date
+            - Mon, 23 Nov 2020 04:01:27 GMT
+        - - transfer-encoding
+          - !!python/tuple
+            - transfer-encoding
+            - chunked
+        - - via
+          - !!python/tuple
+            - via
+            - 1.1 vegur
+    status:
+      code: 200
+      message: OK
+    url: https://ghibliapi.herokuapp.com/people?fields=id%2Cname%2Cfilms%2Curl
+version: 1
