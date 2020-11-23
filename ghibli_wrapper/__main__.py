@@ -1,10 +1,19 @@
-import asks
+import asyncio
+
+from hypercorn.config import Config
+from hypercorn.asyncio import serve
+
+from ghibli_wrapper.app import app
+
+USE_PORT = 8000
 
 
-def main():
-    asks.init('trio')
-    print('hello world')
+async def main():
+    config = Config()
+    config.bind = [f'localhost:{USE_PORT}']
+
+    await serve(app, config)
 
 
 if __name__ == '__main__':
-    main()
+    asyncio.run(main())
