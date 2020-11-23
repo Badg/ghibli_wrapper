@@ -5,6 +5,7 @@ test only one thing at a time). But these things take time and thought,
 and I'm short on both at the moment.
 '''
 import dataclasses
+import logging
 from typing import Any
 from unittest.mock import MagicMock
 
@@ -132,7 +133,9 @@ class TestUpsertOnlyCacheAndRequestThroughCache:
         assert cache_result.value == cache_value
         sentinel.assert_called()
 
-    async def test_cache_stale_upstream_failure_with_besteffort(self, freezer):
+    async def test_cache_stale_upstream_failure_with_besteffort(
+        self, freezer, caplog
+    ):
         sentinel = MagicMock()
         cache_key = 'foo'
         cache_value = 0
@@ -151,10 +154,22 @@ class TestUpsertOnlyCacheAndRequestThroughCache:
         freezer.tick(cache_ttl * 1.5)
         assert cache.needs_update()
 
+        # TODO: we want to swallow the logging here somehow, I just can't find
+        # a way to do this for a single test (this is another argument in favor
+        # of converting this to an "info" loglevel instead of a warning)
         cache_result, = (await request_through_cache(
             cacheable_mock_always_fails)).values()
         assert cache_result.value == cache_value
         sentinel.assert_called()
+
+        warning_issued = False
+        for record in caplog.records:
+            if (
+                record.name == 'ghibli_wrapper.cache' and
+                record.levelname == 'WARNING'
+            ):
+                warning_issued = True
+        assert warning_issued
 
     async def test_cache_ttl_override(self, freezer):
         sentinel = MagicMock()

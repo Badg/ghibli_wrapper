@@ -46,11 +46,6 @@ def fixup_pydantic(monkeypatch):
         pydantic.main, 'resolve_annotations', resolve_annotations_fixup)
 
 
-@pytest.fixture(autouse=True)
-def run_asks_init():
-    asks.init('trio')
-
-
 async def vcr_record_response(cassette, vcr_request, response):
     '''Stub to record an asks response into a VCR request/response
     chain.
