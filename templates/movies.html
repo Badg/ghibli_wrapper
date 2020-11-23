@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang='en'>
+<!-- 
+    Note: if we had literally any other templates, we would want this to be
+    a root template that the other templates inherited
+-->
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width,initial-scale=1.0'>
+    <meta name='theme-color' content='#333333'>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <title>Studio Ghibli Movies</title>
+</head>
+<!--
+    Okay I'll be the first to admit this HTML is a little sloppy
+ -->
+<body>
+    <ul id="movies">
+    {% for movie in movies %}
+        <li>
+            <h2>{{movie.title}} [{{movie.release_year}}]</h2>
+            <p>{{movie.description}}</p>
+            <p>
+                <h4>Starring...</h4>
+                <ul>
+                {% for person in movie.people %}
+                    <li><p>
+                        <a href="{{person.url}}">{{person.name}}</a>
+                    </p></li>
+                {% endfor %}
+                </ul>
+            </p>
+        </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>

@@ -218,7 +218,8 @@ async def request_through_cache(cacheable_coro, best_effort=True, ttl=None):
     if cache.needs_update(ttl):
         try:
             # Note that this only works for small results. Large responses
-            # could run into memory issues
+            # could run into memory issues. Also, I'm annoyed that we're
+            # messing up our async generator semantics from the cacheable_coro
             cache.update(
                 {keygenner(item): item async for item in cacheable_coro()}
             )

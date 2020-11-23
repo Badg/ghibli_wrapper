@@ -5,7 +5,6 @@ test only one thing at a time). But these things take time and thought,
 and I'm short on both at the moment.
 '''
 import dataclasses
-import logging
 from typing import Any
 from unittest.mock import MagicMock
 

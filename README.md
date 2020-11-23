@@ -12,13 +12,19 @@ Mostly written for the obvious reasons 😊, but I also wanted to learn a bit. I
 
 ### Some (important!) caveats
 
++   First and foremost, things got busy, and I ran out of time. There are tons of comments in the code (and a number of TODOs, which would ideally also be accompanied by jira/etc tickets) explaining some bits I didn't have time for, but I'm sure there are plenty of other things I forgot to comment there as well
++   I started writing this with what I thought would be the harder parts -- in order: ``utils``, ``ghibli``, ``cache``, and finally, ``app``. This had the "amusing" side effect that, when I ran out of time, the parts I put the most effort into were the first ones, which are the least relevant to the actual app itself. Oops!
++   On that note, the app itself (ie ``app.py``) was just manually tested. There are a bunch of automated tests, but integration tests are very lacking. I mean, testing in general is lacking, and there are a lot of notes to that effect in the actual test files. But integration tests are almost nonexistent.
 +   I started out writing this with [Trio](https://github.com/python-trio/trio), since I've used it extensively and it has some really nice async semantics that make it much, much easier to write correct, robust async code. That being said, fastAPI doesn't support it natively, and the code here is so simple that most of the benefits you get are around clean cancellation APIs, signal handling, etc. Tons of "ink" has been spilled about Trio; the [``trio-asyncio`` docs](https://trio-asyncio.readthedocs.io/en/latest/) give a nice overview of the pros/cons. Arguably I should have stuck with asyncio here, but by the time I came to that conclusion, I had already written a bunch of tests using ``pytest-trio``, so it was faster to just keep using it for tests, while switching to plain asyncio for the app itself. So... that's definitely less than ideal. If I had more time, I would go with one or the other.
 +   I didn't have time to implement any configuration whatsoever, so what little configuration was needed (I think just port number) is hard-coded in ``__main__.py``
 +   The test code is really sloppy, especially for the cache. I was low on time, and it was more important to me to have better test coverage than to have all the tests be well-written (that being said, I didn't actually implement a coverage measurement, so it's all just my approximation)
 +   The cache API and, frankly, internal logic could probably use some work, but cacheing is really tricky to get right, application-specific, and time-consuming
++   I didn't configure poetry to include the static and templates directories, so there's still some work to do before you could build this as a pip-installable package
++   I wanted to include some more API endpoints, including one to use the fancy ``HyperlinkFriendlyUUID`` class I created, but I ran out of time for that as well
 
 ### Some lessons learned
 
++   I'm still getting used to Github's CI (I'm more familiar with Jenkins than Github Actions, but that's changing fast!)
 +   Pydantic's API has some rough edges around custom types
 +   I don't want to use VCR.py with python-asks
 +   freezegun documentation comes from the most recent github commit, which is ahead of freezegun's current pypi version. Guess when freezegun added support for time.monotonic?
@@ -77,3 +83,4 @@ Formatted per pep8 but not pep257. Specifics are in ``.flake8``, but the potenti
     *   No line break on first line of docstr (``'''Foo...``, not ``'''\nFoo``)
     *   Closing triple quotes on dedicated line
     *   No blank line before closing triple quotes
++   I'm a little inconsistent about how I break brackets and parenthesis when their contents expand beyond a single line. It's partly something I need to work on, and partly something that I don't think fits well aesthetically into python in general

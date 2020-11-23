@@ -2,6 +2,7 @@
 These coroutines implement no caching, they simply perform requests.
 Only call them when you know you need to hit their servers.
 '''
+import collections
 import dataclasses
 import functools
 import json
@@ -13,6 +14,8 @@ import asks
 import pydantic
 import trio
 
+from ghibli_wrapper.cache import cacheable
+from ghibli_wrapper.cache import UpsertOnlyCache
 from ghibli_wrapper.exceptions import GhibliApiFailure
 
 
@@ -21,6 +24,22 @@ GHIBLI_TIMEOUT_SECONDS = 1
 GHIBLI_RETRIES = 2
 
 logger = logging.getLogger(__name__)
+
+# I would prefer not to store this at the module level, but since FastAPI
+# uses module-level *everything* anyways, and it's suuuuper convenient...
+# Note that we're assuming that people are never removed from movies, and that
+# movies are never un-released
+MOVIE_PEOPLE_LOOKUP = collections.defaultdict(set)
+_GHIBLI_TTL = 60
+
+
+def _update_moviepeople_lookup(people_cache):
+    # This is a very expensive operation -- O(n^2). It wouldn't scale well to
+    # large numbers of films and/or lots of people. The upside is that because
+    # we're caching it, we don't have to do it on every request!
+    for person_id, person in people_cache.all.items():
+        for film_url_info in person.films:
+            MOVIE_PEOPLE_LOOKUP[film_url_info.uuid].add(person.id)
 
 
 # Decorators don't play well with the mccabe complexity checker :(
@@ -100,6 +119,8 @@ def _ghibli_request(endpoint, **params):  # noqa: C901
     return decorator
 
 
+@cacheable(UpsertOnlyCache, default_ttl=_GHIBLI_TTL, cache_key='id',
+           callbacks=[_update_moviepeople_lookup])
 @_ghibli_request('/people', fields=['id', 'name', 'films', 'url'])
 async def get_all_people(json_response):
     '''Get all the people in all Studio Ghibli films from their API.
@@ -113,6 +134,7 @@ async def get_all_people(json_response):
         yield res
 
 
+@cacheable(UpsertOnlyCache, default_ttl=_GHIBLI_TTL, cache_key='id')
 @_ghibli_request(
     '/films', fields=['id', 'title', 'release_date', 'description'])
 async def get_all_films(json_response):

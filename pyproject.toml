@@ -16,6 +16,9 @@ Hypercorn = "^0.11.1"
 trio = "^0.17.0"
 trio-asyncio = "^0.11.0"
 asks = "^2.4.12"
+Jinja2 = "^2.11.2"
+# Starlette didn't include this as a listed dep, grumble grumble
+aiofiles = "^0.6.0"
 
 [tool.poetry.dev-dependencies]
 ipython = "^7.19.0"
@@ -31,6 +34,7 @@ pytest-freezegun = "^0.4.2"
 # workaround to this, though poetry pinning to this specific git hash means
 # this isn't the end of the world. For what it's worth, this is just in dev
 freezegun = {git = "https://github.com/spulec/freezegun.git"}
+httpx = "^0.16.1"
 
 [tool.pytest.ini_options]
 addopts = "-rA -q"
