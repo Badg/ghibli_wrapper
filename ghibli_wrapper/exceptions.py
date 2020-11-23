@@ -14,7 +14,15 @@ class GhilbliWrapperException(Exception):
     '''
 
 
-class GhibliApiFailure(GhilbliWrapperException):
+class PartnerUnavailable(GhilbliWrapperException):
+    '''Raised when we fail to talk to *any* partner. Yes, this is
+    over-generalization if we were truly just wrapping Studio Ghibli.
+    But this way, I get a useful future reference in addition to a toy
+    API wrapper.
+    '''
+
+
+class GhibliApiFailure(PartnerUnavailable):
     '''A catchall error raised when we fail to talk to Studio Ghibli's
     API. This could be them having downtime, network problems between
     us, our wrapper code breaking, or any number of similar issues.

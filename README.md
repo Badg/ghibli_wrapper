@@ -14,6 +14,12 @@ Mostly written for the obvious reasons 😊, but I also wanted to learn a bit. I
 
 +   Pydantic's API has some rough edges around custom types
 +   I don't want to use VCR.py with python-asks
++   freezegun documentation comes from the most recent github commit, which is ahead of freezegun's current pypi version. Guess when freezegun added support for time.monotonic?
+
+### Some caveats
+
++   The test code is really sloppy, especially for the cache. I was low on time, and it was more important to me to have better test coverage than to have all the tests be well-written (that being said, I didn't actually implement a coverage measurement, so it's all just my approximation)
++   The cache API and, frankly, internal logic could probably use some work, but cacheing is really tricky to get right, application-specific, and time-consuming
 
 ## Installation, usage, tests
 
